@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>敲敲打打游戏介绍</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'EB Garamond', serif;
+            background-color: #f4e9d4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        #header {
+            background-color: #6b482f;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        #logo {
+            display: flex;
+            align-items: center;
+        }
+
+        #logo img {
+            height: 100px;
+            margin-right: 10px;
+        }
+
+        #logo span {
+            font-size: 4em; /* 调整字体大小，大约使文字高度为80px */
+        }
+
+        #nav {
+            display: flex;
+        }
+
+        #nav.nav_link {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        #nav.nav_link.on {
+            color: #f4e9d4;
+        }
+
+        #nav.nav_link:hover {
+            color: #f4e9d4;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            color: #6b482f;
+            font-size: 2em;
+            margin-top: 0;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        /* 轮播图样式 */
+      .slider {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+      .slider-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+      .slider-images img {
+            min-width: 100%;
+            height: auto;
+        }
+
+      .slider-buttons {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+      .slider-buttons button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        /* 游戏特色板块样式 */
+      .feature {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+      .feature-item {
+            width: 350px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+        }
+
+      .feature-item img {
+            width: 60px;
+            height: 60px;
+            margin-right: 15px;
+        }
+
+      .feature-item h3 {
+            margin: 0;
+            font-size: 1.4em;
+        }
+
+        footer {
+            background-color: #6b482f;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 网页头部 -->
+    <header id="header">
+        <div id="logo">
+            <img src="img/logo.png" alt="游戏 logo">
+            <span>敲敲打打</span>
+        </div>
+        <nav id="nav">
+        </nav>
+    </header>
+
+    <!-- 轮播图部分 -->
+    <section class="slider">
+        <div class="slider-images">
+            <!-- 这里可以替换为实际的游戏截图链接 -->
+            <img src="img/20250131_1228_Enchanting Skeleton Smith_simple_compose_01jjz0tercedkvtnp46q2nzz41.gif" alt="游戏截图1">
+            <!-- <img src="https://via.placeholder.com/800x400?text=游戏截图2" alt="游戏截图2">
+            <img src="https://via.placeholder.com/800x400?text=游戏截图3" alt="游戏截图3"> -->
+        </div>
+        <div class="slider-buttons">
+            <button id="prevButton">&lt;</button>
+            <button id="nextButton">&gt;</button>
+        </div>
+    </section>
+
+    <!-- 游戏特色部分 -->
+    <section>
+        <h2>游戏特色</h2>
+        <div class="feature">
+            <div class="feature-item">
+                <img src="img/骷髅.png" alt="起源图标">
+                <div>
+                    <h3>奇幻背景下的独特冒险起源</h3>
+                    <p>嘿，你知道吗？在这个超奇幻的异世界，复活的小骷髅本来懵懵懂懂，结果偶然捡到了一本神秘的铁匠手册，从此就开启了敲敲打打、充满惊喜的奇妙打铁梦想之旅！这开场是不是超带感？感觉下一秒就要抡起锤子大干一场啦！</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <img src="img/地区分布.png" alt="地区图标">
+                <div>
+                    <h3>多元地区特色打造体验</h3>
+                    <p>哇哦，这个世界的各个地区都超有个性！到了庄严神圣的城堡，就得敲打出帅气的剑盾，瞬间化身英勇无畏的骑士；踏入神秘的法师国度，那就专注于法杖和法袍的锻造，感受魔法的酷炫强大力量；走进充满生机的森林，还能打造出精灵王冠，满满都是令人陶醉的自然灵性。每个地方都画风迥异，新鲜感那叫一个拉满！</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <img src="img/新建关卡.png" alt="关卡图标">
+                <div>
+                    <h3>循序渐进的关卡挑战</h3>
+                    <p>游戏里的关卡可不是吃素的哦！一开始，咱就敲打出些简单的武器装备，熟悉熟悉流程。但越往后，顾客的要求就越来越离谱，不仅要高品质，还得各种新奇独特的定制。这可就得咱们不断提升锻造技能，合理搭配材料，才能成功过关，超有成就感哒！</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <img src="img/玩法.png" alt="玩法图标">
+                <div>
+                    <h3>丰富的锻造玩法与策略</h3>
+                    <p>游戏里条件一满足，就能随机选科技或商品。不同商品材料和锻造手法大相径庭，科技还有各种意想不到的加成，加速锻造、提升材料品质都有可能。材料能在局内订购，根据订单和资金，巧妙搭配科技与商品，策略拉满！</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <img src="img/事件管理.png" alt="事件图标">
+                <div>
+                    <h3>随机事件与惊喜奖励</h3>
+                    <p>冒险路上从来不缺意外！时不时就会蹦出些随机事件，有时候能大赚一笔，有时候也可能亏得底儿掉。不过这才有意思嘛，充满不确定性才叫冒险！而且每次完成任务，都能收获一大罐金币，折算成小骨头后，就能召唤更多超酷超实用的旅行用品，谁说金币换小骨头不值啦，我们可是小骷髅，超爱这些小骨头的！</p>
+                </div>
+            </div>
+            <!-- <div class="feature-item">
+                <img src="icon_coop.png" alt="合作图标">
+                <div>
+                    <h3>多人合作共铸辉煌</h3>
+                    <p>一个人敲敲打打多无聊呀，叫上小伙伴一起！有人负责收集材料，有人专心锻造，还有人去和顾客打交道。大家齐心协力，一起应对各种难题，在这个奇幻世界里闯出属于我们独一无二的铁匠传奇！</p>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>&copy; 2025 敲敲打打版权所有</p>
+    </footer>
+
+    <script>
+        const sliderImages = document.querySelector('.slider-images');
+        const prevButton = document.getElementById('prevButton');
+        const nextButton = document.getElementById('nextButton');
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.slider-images img');
+        const imageCount = images.length;
+
+        function showImage(index) {
+            sliderImages.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % imageCount;
+            showImage(currentIndex);
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + imageCount) % imageCount;
+            showImage(currentIndex);
+        }
+
+        nextButton.addEventListener('click', nextImage);
+        prevButton.addEventListener('click', prevImage);
+    </script>
+</body>
+
+</html>
