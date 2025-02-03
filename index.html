@@ -74,10 +74,11 @@
 
         p {
             line-height: 1.6;
+            text-align: justify; /* 优化文本对齐方式，使段落更整齐 */
         }
 
         /* 轮播图样式 */
-      .slider {
+  .slider {
             position: relative;
             width: 100%;
             max-width: 800px;
@@ -85,42 +86,48 @@
             overflow: hidden;
         }
 
-      .slider-images {
+  .slider-images {
             display: flex;
             transition: transform 0.5s ease-in-out;
         }
 
-      .slider-images img {
+  .slider-images img {
             min-width: 100%;
             height: auto;
         }
 
-      .slider-buttons {
+  .slider-buttons {
             position: absolute;
             top: 50%;
+            left: 0;
             transform: translateY(-50%);
             width: 100%;
             display: flex;
             justify-content: space-between;
         }
 
-      .slider-buttons button {
+  .slider-buttons button {
             background-color: rgba(0, 0, 0, 0.5);
             color: white;
             border: none;
-            padding: 10px;
+            padding: 6px;
             cursor: pointer;
+            transition: background-color 0.3s ease; /* 增加按钮背景颜色过渡效果 */
+        }
+
+  .slider-buttons button:hover {
+            background-color: rgba(0, 0, 0, 0.7);
         }
 
         /* 游戏特色板块样式 */
-      .feature {
+  .feature {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
             margin-top: 20px;
         }
 
-      .feature-item {
+  .feature-item {
             width: 350px;
             background-color: #f4f4f4;
             border-radius: 5px;
@@ -129,15 +136,20 @@
             box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
             display: flex;
             align-items: center;
+            transition: transform 0.3s ease; /* 增加特色板块鼠标悬停时的动画效果 */
         }
 
-      .feature-item img {
+  .feature-item:hover {
+            transform: scale(1.05);
+        }
+
+  .feature-item img {
             width: 60px;
             height: 60px;
             margin-right: 15px;
         }
 
-      .feature-item h3 {
+  .feature-item h3 {
             margin: 0;
             font-size: 1.4em;
         }
@@ -145,7 +157,8 @@
         footer {
             background-color: #6b482f;
             color: white;
-            text-align: center;
+            display: flex;
+            justify-content: center;
             padding: 10px;
         }
     </style>
@@ -166,9 +179,9 @@
     <section class="slider">
         <div class="slider-images">
             <!-- 这里可以替换为实际的游戏截图链接 -->
-            <img src="img/20250131_1228_Enchanting Skeleton Smith_simple_compose_01jjz0tercedkvtnp46q2nzz41.gif" alt="游戏截图1">
-            <!-- <img src="https://via.placeholder.com/800x400?text=游戏截图2" alt="游戏截图2">
-            <img src="https://via.placeholder.com/800x400?text=游戏截图3" alt="游戏截图3"> -->
+            <img src="img/tutieshi_640x359_5s.gif" alt="游戏截图1">
+            <!-- <img src="img/another_screenshot.png" alt="游戏截图2"> 
+            <img src="img/third_screenshot.png" alt="游戏截图3">  -->
         </div>
         <div class="slider-buttons">
             <button id="prevButton">&lt;</button>
@@ -183,36 +196,36 @@
             <div class="feature-item">
                 <img src="img/骷髅.png" alt="起源图标">
                 <div>
-                    <h3>奇幻背景下的独特冒险起源</h3>
-                    <p>嘿，你知道吗？在这个超奇幻的异世界，复活的小骷髅本来懵懵懂懂，结果偶然捡到了一本神秘的铁匠手册，从此就开启了敲敲打打、充满惊喜的奇妙打铁梦想之旅！这开场是不是超带感？感觉下一秒就要抡起锤子大干一场啦！</p>
+                    <h3>奇幻起源</h3>
+                    <p>在这个光怪陆离的异世界，复活的小骷髅起初懵懂无知，一次奇妙的邂逅，让它偶然间拾得一本散发神秘气息的铁匠手册。刹那间，一道光划破黑暗，小骷髅就此踏上了敲敲打打、满是惊喜的奇妙打铁逐梦之旅！这般开场，是不是瞬间点燃你的热血，感觉下一秒就能抡起锤子，在炽热的铁砧上开启传奇？</p>
                 </div>
             </div>
             <div class="feature-item">
-                <img src="img/地区分布.png" alt="地区图标">
+                <img src="img/新建关卡.png" alt="地区图标">
                 <div>
-                    <h3>多元地区特色打造体验</h3>
-                    <p>哇哦，这个世界的各个地区都超有个性！到了庄严神圣的城堡，就得敲打出帅气的剑盾，瞬间化身英勇无畏的骑士；踏入神秘的法师国度，那就专注于法杖和法袍的锻造，感受魔法的酷炫强大力量；走进充满生机的森林，还能打造出精灵王冠，满满都是令人陶醉的自然灵性。每个地方都画风迥异，新鲜感那叫一个拉满！</p>
-                </div>
-            </div>
-            <div class="feature-item">
-                <img src="img/新建关卡.png" alt="关卡图标">
-                <div>
-                    <h3>循序渐进的关卡挑战</h3>
-                    <p>游戏里的关卡可不是吃素的哦！一开始，咱就敲打出些简单的武器装备，熟悉熟悉流程。但越往后，顾客的要求就越来越离谱，不仅要高品质，还得各种新奇独特的定制。这可就得咱们不断提升锻造技能，合理搭配材料，才能成功过关，超有成就感哒！</p>
+                    <h3>多元打造</h3>
+                    <p>踏入这个世界，仿佛踏入了一个多元文化的熔炉！庄严巍峨的城堡下，挥舞铁锤，打造出锋利剑盾，瞬间化身为守护正义的英勇骑士；神秘莫测的法师国度中，专注于法杖与法袍的雕琢，感受魔法的神秘符文与强大力量在指尖流淌；生机盎然的森林深处，精心打造精灵王冠，每一道纹理都蕴含着自然的灵动与神秘。每个地区都独具魅力，带来前所未有的新鲜感与创作激情！</p>
                 </div>
             </div>
             <div class="feature-item">
                 <img src="img/玩法.png" alt="玩法图标">
                 <div>
-                    <h3>丰富的锻造玩法与策略</h3>
-                    <p>游戏里条件一满足，就能随机选科技或商品。不同商品材料和锻造手法大相径庭，科技还有各种意想不到的加成，加速锻造、提升材料品质都有可能。材料能在局内订购，根据订单和资金，巧妙搭配科技与商品，策略拉满！</p>
+                    <h3>玩法策略</h3>
+                    <p>游戏进程中，一旦满足特定条件，就能开启随机科技与商品的选择盛宴！不同商品所需材料千差万别，锻造手法更是各有千秋，而科技的加成效果也充满惊喜，可能是加速锻造流程，也可能是提升材料品质。在局内灵活订购材料，依据订单需求与手头资金，巧妙搭配科技与商品，每一次决策都是智慧的较量，策略深度拉满！</p>
                 </div>
             </div>
             <div class="feature-item">
                 <img src="img/事件管理.png" alt="事件图标">
                 <div>
-                    <h3>随机事件与惊喜奖励</h3>
-                    <p>冒险路上从来不缺意外！时不时就会蹦出些随机事件，有时候能大赚一笔，有时候也可能亏得底儿掉。不过这才有意思嘛，充满不确定性才叫冒险！而且每次完成任务，都能收获一大罐金币，折算成小骨头后，就能召唤更多超酷超实用的旅行用品，谁说金币换小骨头不值啦，我们可是小骷髅，超爱这些小骨头的！</p>
+                    <h3>随机事件</h3>
+                    <p>冒险之旅从不缺少意外！前行途中，随时可能触发神秘事件。或许会有神秘商人如幽灵般现身，带着稀世材料，为你的锻造之路添砖加瓦；又或许会遭遇突如其来的风暴，狂风呼啸，阻碍锻造进度。这些毫无征兆的随机事件，为游戏注入了无尽的未知与刺激，让每一次打铁冒险都充满新奇与挑战！</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <img src="img/骨头.png" alt="奖励图标">
+                <div>
+                    <h3>惊喜奖励</h3>
+                    <p>每次成功完成任务，都能收获惊喜！入账的金币换算成小骨头后用处多多。能升级旅行背包，增加材料携带上限；升级靴子，提升移动速度。还能兑换大型旅行工具，添置新衣服。这些奖励不仅是实力的证明，还能助力后续冒险！</p>
                 </div>
             </div>
             <!-- <div class="feature-item">
