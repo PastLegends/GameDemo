@@ -78,7 +78,7 @@
         }
 
         /* 轮播图样式 */
-  .slider {
+      .slider {
             position: relative;
             width: 100%;
             max-width: 800px;
@@ -86,17 +86,17 @@
             overflow: hidden;
         }
 
-  .slider-images {
+      .slider-images {
             display: flex;
             transition: transform 0.5s ease-in-out;
         }
 
-  .slider-images img {
+      .slider-images img {
             min-width: 100%;
             height: auto;
         }
 
-  .slider-buttons {
+      .slider-buttons {
             position: absolute;
             top: 50%;
             left: 0;
@@ -106,7 +106,7 @@
             justify-content: space-between;
         }
 
-  .slider-buttons button {
+      .slider-buttons button {
             background-color: rgba(0, 0, 0, 0.5);
             color: white;
             border: none;
@@ -115,19 +115,19 @@
             transition: background-color 0.3s ease; /* 增加按钮背景颜色过渡效果 */
         }
 
-  .slider-buttons button:hover {
+      .slider-buttons button:hover {
             background-color: rgba(0, 0, 0, 0.7);
         }
 
         /* 游戏特色板块样式 */
-  .feature {
+      .feature {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
             margin-top: 20px;
         }
 
-  .feature-item {
+      .feature-item {
             width: 350px;
             background-color: #f4f4f4;
             border-radius: 5px;
@@ -139,17 +139,17 @@
             transition: transform 0.3s ease; /* 增加特色板块鼠标悬停时的动画效果 */
         }
 
-  .feature-item:hover {
+      .feature-item:hover {
             transform: scale(1.05);
         }
 
-  .feature-item img {
+      .feature-item img {
             width: 60px;
             height: 60px;
             margin-right: 15px;
         }
 
-  .feature-item h3 {
+      .feature-item h3 {
             margin: 0;
             font-size: 1.4em;
         }
@@ -161,6 +161,54 @@
             justify-content: center;
             padding: 10px;
         }
+
+        /* 下拉菜单样式 */
+      .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+      .dropdown-button {
+            background-color: transparent;
+            color: white;
+            padding: 30px;
+            border: none;
+            cursor: pointer;
+            font-size: 2em;
+        }
+
+      .dropdown-content {
+            display: none;
+            left: 50%;                   /* 左边缘定位到父容器中点 */
+            transform: translateX(-50%); /* 向左移动自身宽度的50% */
+            text-align: center;         /* 所有子元素文字居中 */
+            position: absolute;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            min-width: 120px;
+            z-index: 1;
+        }
+
+      .dropdown-content a {
+            color: #333;
+            padding: 12px 20px;
+            text-decoration: none;
+            display: block;
+            text-align: inherit;        /* 继承父容器的居中设置 */
+            white-space: nowrap;        /* 防止文字换行破坏居中效果 */
+            font-size: 1em;
+        }
+
+      .dropdown-content a:hover {
+            background-color: #f5f5f5;
+            border-radius: 8px;
+        }
+
+      .dropdown:hover .dropdown-content,
+      .dropdown:active .dropdown-content {
+            display: block;
+        }
     </style>
 </head>
 
@@ -171,8 +219,15 @@
             <img src="img/logo.png" alt="游戏 logo">
             <span>敲敲打打</span>
         </div>
-        <nav id="nav">
-        </nav>
+        <div class="dropdown">
+            <button class="dropdown-button">游戏拆解分析</button>
+            <div class="dropdown-content">
+                <a href="《杯杯倒满》游戏拆解分析.docx">《杯杯倒满》</a>
+                <a href="《瘟疫传说》游戏拆解分析.docx">《瘟疫传说》</a>
+                <a href="《废墟图书馆》游戏拆解分析.docx">《废墟图书馆》</a>
+                <a href="《网吧进化论》游戏拆解分析.docx">《网吧进化论》</a>
+            </div>
+        </div>
     </header>
 
     <!-- 轮播图部分 -->
@@ -240,7 +295,7 @@
 
     <!-- 页脚 -->
     <footer>
-        <p>&copy; 2025 敲敲打打版权所有</p>
+        <p>&copy; 2025敲敲打打版权所有</p>
     </footer>
 
     <script>
@@ -271,3 +326,4 @@
 </body>
 
 </html>
+
